@@ -4,7 +4,7 @@ CFLAGS= -Wall -Werror
 EXECUTABLE = geometry
 all: bin/$(EXECUTABLE)
 
-bin/$(EXECUTABLE):build/my_prog.o build/perimetr.o build/square.o build/peres.o
+bin/$(EXECUTABLE):build/project.o build/perimetr.o build/square.o build/peres.o
 	$(CC) $(CFLAGS) build/project.o build/perimetr.o build/square.o build/peres.o -lm -o bin/$(EXECUTABLE)
 build/my_prog.o: src/my_prog.c
 	$(CC) $(CFLAGS) src/project.c -o build/project.o -c -lm 
