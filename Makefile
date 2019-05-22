@@ -6,7 +6,7 @@ all: bin/$(EXECUTABLE)
 
 bin/$(EXECUTABLE):build/project.o build/perimetr.o build/square.o build/peres.o
 	$(CC) $(CFLAGS) build/project.o build/perimetr.o build/square.o build/peres.o -lm -o bin/$(EXECUTABLE)
-build/my_prog.o: src/my_prog.c
+build/project.o: src/project.c
 	$(CC) $(CFLAGS) src/project.c -o build/project.o -c -lm 
 
 build/perimetr.o: src/perimetr.c
